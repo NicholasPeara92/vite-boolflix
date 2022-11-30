@@ -14,12 +14,32 @@ export default {
       store,
     };
   },
+  methods: {
+    searchMovie(data = "") {
+      if (data === "reset") {
+        this.store.searchText = "";
+      }
+      axios
+        .get("https://api.themoviedb.org/3/search/movie", {
+          params: {
+            api_key: "25f24fd3ebdb2b8fa4786f77d8241b8d",
+            query: this.store.searchText,
+          },
+        })
+        .then((resp) => {
+          this.store.movies = resp.data.results;
+        })
+        .catch((err) => {
+          this.store.movies = [];
+        });
+    },
+  },
 };
 </script>
 
 <template>
   <div>
-    <AppHeader />
+    <AppHeader @search="searchMovie" />
     <AppMain />
   </div>
 </template>
