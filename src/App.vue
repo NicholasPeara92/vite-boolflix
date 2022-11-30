@@ -24,6 +24,7 @@ export default {
           params: {
             api_key: "25f24fd3ebdb2b8fa4786f77d8241b8d",
             query: this.store.searchText,
+            language: "it-IT",
           },
         })
         .then((resp) => {

@@ -16,13 +16,7 @@ export default {
 
 <template>
   <ul>
-    <AppCard
-      v-for="movie in store.movies"
-      :title="movie.title"
-      :originalTitle="movie.original_title"
-      :originalLanguage="movie.original_language"
-      :vote="movie.vote_average"
-    />
+    <AppCard v-for="movie in store.movies" :info="movie" />
   </ul>
 </template>
 

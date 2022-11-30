@@ -1,21 +1,23 @@
 <script>
+import { stringifyExpression } from "@vue/compiler-core";
+
 export default {
   props: {
-    title: String,
-    originalTitle: String,
-    originalLanguage: String,
-    vote: Number,
+    info: Object,
   },
 };
 </script>
 <template>
   <li>
     <div class="my-card">
-      <img src="" alt="" />
-      <h4>Titolo: {{ title }}</h4>
-      <h6>Titolo originale: {{ originalTitle }}</h6>
-      <h6>Lingua originale: {{ originalLanguage }}</h6>
-      <h6>Voto: {{ vote }}</h6>
+      <img
+        :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`"
+        :alt="info.title"
+      />
+      <h4>Titolo: {{ info.title }}</h4>
+      <h6>Titolo originale: {{ info.original_title }}</h6>
+      <h6>Lingua originale: {{ info.original_language }}</h6>
+      <h6>Voto: {{ info.vote_average }}</h6>
     </div>
   </li>
 </template>
