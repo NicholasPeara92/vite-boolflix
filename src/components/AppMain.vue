@@ -15,16 +15,23 @@ export default {
 </script>
 
 <template>
-  <ul>
-    <AppCard v-for="movie in store.movies" :info="movie" />
-  </ul>
+  <section class="my-container">
+    <ul>
+      <AppCard v-for="movie in store.movies" :info="movie" />
+    </ul>
+  </section>
 </template>
 
 <style lang="scss" scoped>
+.my-container {
+  background-color: rgb(78, 75, 75);
+}
 ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  color: white;
+  padding-left: 0;
 }
 </style>

@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
   <li>
-    <div class="my-card">
+    <div class="my-card m-2">
       <img
         :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`"
         :alt="info.title"
@@ -25,5 +25,7 @@ export default {
 <style lang="scss" scoped>
 .my-card {
   width: 342px;
+  height: 700px;
+  border: 1px solid white;
 }
 </style>
