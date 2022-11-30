@@ -32,6 +32,25 @@ export default {
         })
         .catch((err) => {
           this.store.movies = [];
+          this.store.series = [];
+        });
+      if (data === "reset") {
+        this.store.searchText = "";
+      }
+      axios
+        .get("https://api.themoviedb.org/3/search/tv", {
+          params: {
+            api_key: "25f24fd3ebdb2b8fa4786f77d8241b8d",
+            query: this.store.searchText,
+            language: "it-IT",
+          },
+        })
+        .then((resp) => {
+          this.store.series = resp.data.results;
+        })
+        .catch((err) => {
+          this.store.movies = [];
+          this.store.series = [];
         });
     },
   },

@@ -15,9 +15,14 @@ export default {
 </script>
 
 <template>
-  <section class="my-container">
+  <section class="my-container movies">
     <ul>
       <AppCard v-for="movie in store.movies" :info="movie" />
+    </ul>
+  </section>
+  <section class="my-container series">
+    <ul>
+      <AppCard v-for="serie in store.series" :info="serie" />
     </ul>
   </section>
 </template>
