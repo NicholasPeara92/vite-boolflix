@@ -1,19 +1,29 @@
 <script>
-import PageTitle from "./components/PageTitle.vue";
+import axios from "axios";
+import { store } from "./store.js";
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
 
 export default {
   components: {
-    PageTitle,
+    AppHeader,
+    AppMain,
+  },
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
 
 <template>
   <div>
-    <PageTitle />
+    <AppHeader />
+    <AppMain />
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
 @import "./style/global.scss";
 </style>
