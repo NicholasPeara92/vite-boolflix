@@ -1,10 +1,12 @@
 <script>
 import { store } from "../store";
 import AppCard from "./AppCard.vue";
+import AppCardTv from "./AppCardTv.vue";
 
 export default {
   components: {
     AppCard,
+    AppCardTv,
   },
   data() {
     return {
@@ -22,7 +24,7 @@ export default {
   </section>
   <section class="my-container series">
     <ul>
-      <AppCard v-for="serie in store.series" :info="serie" />
+      <AppCardTv v-for="serie in store.series" :info="serie" />
     </ul>
   </section>
 </template>

@@ -11,11 +11,11 @@ export default {
       <img
         class="poster"
         :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`"
-        :alt="info.title"
+        :alt="info.name"
       />
       <div class="description">
-        <h4>Titolo: {{ info.title }}</h4>
-        <h6>Titolo originale: {{ info.original_title }}</h6>
+        <h4>Titolo: {{ info.name }}</h4>
+        <h6>Titolo originale: {{ info.original_name }}</h6>
         <h6>Lingua originale: {{ info.original_language }}</h6>
         <h6>Voto: {{ info.vote_average }}</h6>
       </div>
