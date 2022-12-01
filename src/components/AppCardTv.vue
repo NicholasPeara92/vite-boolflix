@@ -34,13 +34,30 @@ export default {
         :alt="info.title"
         class="poster"
       />
-      <div class="description">
-        <h4>Titolo: {{ info.name }}</h4>
-        <h6>Titolo originale: {{ info.original_name }}</h6>
+      <div class="description py-4 px-3">
+        <h4>
+          Titolo: <small>{{ info.name }}</small>
+        </h4>
+        <h6>
+          Titolo originale: <small>{{ info.original_name }}</small>
+        </h6>
         <span :class="`fi fi-${enFlag(info.original_language)}`"></span>
-        <h6>Voto:</h6>
-        <font-awesome-icon v-for="n in vote" icon="fa-solid fa-star" />
-        <font-awesome-icon v-for="n in 5 - vote" icon="fa-regular fa-star" />
+        <div>
+          Voto:
+          <font-awesome-icon
+            class="star"
+            v-for="n in vote"
+            icon="fa-solid fa-star"
+          />
+          <font-awesome-icon
+            class="star"
+            v-for="n in 5 - vote"
+            icon="fa-regular fa-star"
+          />
+        </div>
+        <h6>
+          Overview: <small class="trama">{{ info.overview }}</small>
+        </h6>
       </div>
     </div>
   </li>
@@ -56,6 +73,9 @@ export default {
     object-position: top;
     width: 100%;
   }
+  small {
+    color: rgb(179, 175, 175);
+  }
 }
 .description {
   position: absolute;
@@ -68,6 +88,10 @@ export default {
   opacity: 0;
   transition: 0.5s ease;
   background-color: black;
+  overflow-y: scroll;
+}
+.star {
+  color: gold;
 }
 .my-card:hover .description {
   opacity: 1;
