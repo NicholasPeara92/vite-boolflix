@@ -50,6 +50,12 @@ export default {
 .my-card {
   width: 342px;
   position: relative;
+  img {
+    height: 450px;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
 }
 .description {
   position: absolute;
