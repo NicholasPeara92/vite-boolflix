@@ -17,21 +17,24 @@ export default {
 </script>
 
 <template>
-  <section class="my-container movies">
-    <ul>
-      <AppCard v-for="movie in store.movies" :info="movie" />
-    </ul>
-  </section>
-  <section class="my-container series">
-    <ul>
-      <AppCardTv v-for="serie in store.series" :info="serie" />
-    </ul>
+  <section class="my-container py-4">
+    <section class="movies">
+      <ul>
+        <AppCard v-for="movie in store.movies" :info="movie" />
+      </ul>
+    </section>
+    <section class="series">
+      <ul>
+        <AppCardTv v-for="serie in store.series" :info="serie" />
+      </ul>
+    </section>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .my-container {
   background-color: rgb(78, 75, 75);
+  min-height: calc(100vh - 56px);
 }
 ul {
   list-style: none;

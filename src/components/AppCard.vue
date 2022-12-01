@@ -68,6 +68,7 @@ export default {
   width: 342px;
   position: relative;
   img {
+    border-radius: 10px;
     height: 450px;
     object-fit: cover;
     object-position: top;
@@ -81,6 +82,7 @@ export default {
   color: gold;
 }
 .description {
+  border-radius: 10px;
   position: absolute;
   top: 0;
   bottom: 0;
