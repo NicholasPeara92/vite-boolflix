@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     vote() {
-      return this.Math.ceil(this.info.vote_average / 2);
+      return Math.ceil(this.info.vote_average / 2);
     },
   },
 };
