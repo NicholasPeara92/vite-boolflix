@@ -16,9 +16,6 @@ export default {
   },
   methods: {
     searchMovie(data = "") {
-      if (data === "reset") {
-        this.store.searchText = "";
-      }
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
@@ -34,9 +31,6 @@ export default {
           this.store.movies = [];
           this.store.series = [];
         });
-      if (data === "reset") {
-        this.store.searchText = "";
-      }
       axios
         .get("https://api.themoviedb.org/3/search/tv", {
           params: {
