@@ -95,6 +95,7 @@ export default {
   transition: 0.5s ease;
   background-color: black;
   overflow-y: scroll;
+  z-index: 5;
 }
 .my-card:hover .description {
   opacity: 1;

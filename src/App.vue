@@ -59,5 +59,16 @@ export default {
 </template>
 
 <style lang="scss">
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0.625rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 0.625rem;
+}
 @import "./style/global.scss";
 </style>

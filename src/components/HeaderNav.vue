@@ -42,6 +42,9 @@ export default {
         color: white;
         font-weight: bold;
       }
+      a:hover {
+        color: red;
+      }
     }
   }
 }

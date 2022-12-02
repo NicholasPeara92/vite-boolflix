@@ -59,10 +59,6 @@ header {
   left: 0;
   z-index: 10;
 }
-h1 {
-  color: red;
-  font-weight: bold;
-}
 input {
   background-color: inherit;
   color: white;
@@ -87,5 +83,8 @@ button {
 .fa-user {
   color: white;
   padding-left: 15px;
+}
+i:hover {
+  color: red;
 }
 </style>
