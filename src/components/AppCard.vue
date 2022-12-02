@@ -36,10 +36,11 @@ export default {
       />
       <div class="description py-4 px-3">
         <h4>
-          Titolo: <small>{{ info.title }}</small>
+          Titolo: <small>{{ info.title || info.name }}</small>
         </h4>
         <h6>
-          Titolo originale: <small>{{ info.original_title }}</small>
+          Titolo originale:
+          <small>{{ info.original_title || info.original_name }}</small>
         </h6>
         <span :class="`fi fi-${enFlag(info.original_language)}`"></span>
         <div>
@@ -97,6 +98,7 @@ export default {
 }
 .my-card:hover .description {
   opacity: 1;
+  scale: 1.1;
   cursor: pointer;
 }
 </style>
